@@ -1,0 +1,15 @@
+<div>Show me</div>
+
+<ng-container [ngTemplateOutlet]="myTemplateOrig" [ngTemplateOutletContext]="{name:nameFromComponent, $implicit: 20}"></ng-container>
+
+<ng-template let-name="name" let-age #myTemplateOrig>
+    <div>
+        This is my original. blah blah template: {{name}} {{age}}
+    </div>
+</ng-template>
+
+<ng-template let-name="name" let-age #myTemplateNew>
+    <div>
+        This is my update. blah blah template: {{name}} {{age}}
+    </div>
+</ng-template>
